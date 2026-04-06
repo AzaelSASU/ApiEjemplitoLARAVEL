@@ -17,10 +17,8 @@ use App\Http\Controllers\API\UsuarioRolController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', function () {
-    return response()->json([
-        'status' => 'API funcionando correctamente'
-    ]);
+Route::get('/usuarios', function () {
+    return "funciona usuarios";
 });
 
 Route::apiResource('usuarios', UsuarioController::class);
