@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Usuario extends Model
 {
- protected $table = 'usuarios';
+    protected $table = 'usuarios';
 
     protected $fillable = [
         'nombre',
@@ -18,8 +18,9 @@ class Usuario extends Model
         'activo'
     ];
 
-    public function roles()
-    {
-        return $this->belongsToMany(Rol::class, 'usuario_rol', 'usuario_id', 'rol_id');
-    }
+    // 🔥 RELACIONES DESACTIVADAS TEMPORALMENTE
+    // public function roles()
+    // {
+    //     return $this->belongsToMany(Rol::class, 'usuario_rol', 'usuario_id', 'rol_id');
+    // }
 }
